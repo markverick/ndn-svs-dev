@@ -344,8 +344,8 @@ SVSPubSub::onSyncData(const Data& firstData, const std::pair<Name, SeqNo>& publi
       // Fetch remaining segments
       auto pubName = firstData.getName().getPrefix(-2);
       Interest interest(pubName); // strip off version and segment number
-      ndn::SegmentFetcher::Options opts;
-      auto fetcher = ndn::SegmentFetcher::start(m_face, interest, m_nullValidator, opts);
+      ndn::util::SegmentFetcher::Options opts;
+      auto fetcher = ndn::util::SegmentFetcher::start(m_face, interest, m_nullValidator, opts);
 
       fetcher->onComplete.connectSingleShot([this, publication] (const ndn::ConstBufferPtr& data) {
         try {

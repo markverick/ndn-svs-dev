@@ -51,7 +51,7 @@ SVSyncCore::SVSyncCore(ndn::Face& face,
                m_periodicSyncTime.count() * (1.0 + m_periodicSyncJitter))
   , m_intrReplyDist(0, m_maxSuppressionTime.count())
   , m_keyChainMem("pib-memory:", "tpm-memory:")
-  , m_scheduler(m_face.getIoContext())
+  , m_scheduler(m_face.getIoService())
 {
   // Register sync interest filter
   m_syncRegisteredPrefix =

@@ -22,7 +22,7 @@ namespace ndn::svs {
 Fetcher::Fetcher(Face& face,
                  const SecurityOptions& securityOptions)
   : m_face(face)
-  , m_scheduler(face.getIoContext())
+  , m_scheduler(face.getIoService())
   , m_securityOptions(securityOptions)
 {}
 
