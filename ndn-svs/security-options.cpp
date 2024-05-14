@@ -17,7 +17,7 @@
 #include "security-options.hpp"
 
 namespace ndn::svs {
-
+KeyChain SecurityOptions::DEFAULT_KEYCHAIN;
 const SecurityOptions SecurityOptions::DEFAULT{SecurityOptions::DEFAULT_KEYCHAIN};
 
 BaseSigner::~BaseSigner() = default;

@@ -124,7 +124,7 @@ public:
   /** Interval before validation fail retry */
   int millisBeforeRetryOnValidationFail = 300;
 
-  static inline KeyChain DEFAULT_KEYCHAIN;
+  static KeyChain DEFAULT_KEYCHAIN;
   static const SecurityOptions DEFAULT;
 };
 
